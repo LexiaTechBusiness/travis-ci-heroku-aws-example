@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run joshnavru/travis-ci-heroku-aws-example yarn test
+
+branches:
+  only:
+    - master
+    - develop
+
+deploy:
+  provider: heroku:git
+  api_key: $HEROKU_API_KEY
+  edge: true
+  app: travis-ci-heroku-aws-example
+  on:
+    branch: develop
