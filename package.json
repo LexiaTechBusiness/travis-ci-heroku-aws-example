@@ -1,0 +1,19 @@
+{
+  "name": "travis-ci-heroku-aws-example",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:LexiaTechBusiness/travis-ci-heroku-aws-example.git",
+  "author": "Joshua Navarro <joshua.navarro35@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4",
+    "supertest": "^6.1.3"
+  }
+}
