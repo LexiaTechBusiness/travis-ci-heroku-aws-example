@@ -7,3 +7,8 @@ before_install:
 
 script:
   - docker run joshnavru/travis-ci-heroku-aws-example yarn test
+
+branches:
+  only:
+    - master
+    - develop
