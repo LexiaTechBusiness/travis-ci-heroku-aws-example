@@ -14,7 +14,7 @@ branches:
     - develop
 
 deploy:
-  provider: heroku:git
+  provider: heroku
   api_key: $HEROKU_API_KEY
   edge: true
   app: travis-ci-heroku-aws-example
