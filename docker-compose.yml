@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/home/node/app
+    restart: always
+    environment:
+      - MONGODB_URL=$MONGODB_URL
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.2.1-bionic
+    ports:
+      - 27017:27017

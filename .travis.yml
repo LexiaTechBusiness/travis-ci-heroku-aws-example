@@ -2,11 +2,11 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t joshnavru/travis-ci-heroku-aws-example .
+# before_install:
+#   - docker build -t joshnavru/travis-ci-heroku-aws-example .
 
 script:
-  - docker run joshnavru/travis-ci-heroku-aws-example yarn test
+  - docker-compose run --rm api yarn test
 
 branches:
   only:
