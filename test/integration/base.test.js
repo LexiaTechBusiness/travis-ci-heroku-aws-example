@@ -5,6 +5,7 @@ const app = require('../../src/app');
 
 describe('GET /', () => {
   beforeAll(() => {
+    console.log(config.mongoose.url);
     return mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
       console.log('Connected to MongoDasdasdasdB');
     });
