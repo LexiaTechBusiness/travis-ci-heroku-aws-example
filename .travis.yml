@@ -7,7 +7,7 @@ before_install:
   - docker build -t joshnavru/example .
 
 script:
-  - docker -e MONGODB_URL=$MONGODB_URL run joshnavru/example yarn test
+  - docker run -e MONGODB_URL=$MONGODB_URL joshnavru/example yarn test
 
 branches:
   only:
