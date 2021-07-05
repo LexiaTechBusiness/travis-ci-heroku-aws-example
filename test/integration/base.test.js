@@ -6,8 +6,9 @@ const app = require('../../src/app');
 describe('GET /', () => {
   beforeAll(() => {
     console.log(config.mongoose.url);
-    return mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
+    return mongoose.connect(config.mongoose.url, config.mongoose.options).then((err) => {
       console.log('Connected to MongoDasdasdasdB');
+      if (err) console.log(err);
     });
   });
   it('responds with 200', async () => {
